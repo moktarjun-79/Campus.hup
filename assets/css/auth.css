@@ -1,0 +1,125 @@
+/* ========================================= */
+/* CODES ETUDIES : CSS                       */
+/* ========================================= */
+
+.auth-section {
+    padding: 75px 0;
+    background-color: #f5f7fb;
+    min-height: 700px;
+}
+
+.auth-container {
+    max-width: 560px;
+    margin: auto;
+}
+
+.auth-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.auth-label {
+    color: #2457d6;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.auth-heading h1 {
+    color: #101d36;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.auth-heading h1 span {
+    color: #2457d6;
+}
+
+.auth-heading p {
+    color: #718096;
+}
+
+.auth-card {
+    background-color: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(16, 29, 54, 0.08);
+}
+
+.auth-card h3 {
+    color: #101d36;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.auth-description {
+    color: #718096;
+    margin-bottom: 25px;
+}
+
+.auth-icon {
+    width: 55px;
+    height: 55px;
+    background-color: #edf3ff;
+    color: #2457d6;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.auth-bottom {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.auth-bottom p {
+    color: #718096;
+    margin-bottom: 0;
+}
+
+.auth-bottom a {
+    color: #2457d6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-bottom a:hover {
+    text-decoration: underline;
+}
+
+.verification-success {
+    background-color: #eaf7f1;
+    color: #16845b;
+    padding: 13px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.verification-success i {
+    margin-right: 7px;
+}
+
+.password-heading {
+    color: #101d36;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-text {
+    color: #718096;
+}
+
+/* ========================================= */
+/* NOTION NOUVELLE : RESPONSIVE DESIGN       */
+/* ========================================= */

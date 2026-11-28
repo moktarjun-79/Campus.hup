@@ -1,0 +1,164 @@
+CAMPUSHUB — Explication simple des fichiers du projet
+
+1)  Qu’est-ce que le projet ? CampusHub est un site universitaire qui
+    aide les étudiants à consulter les événements, les ressources, les
+    services et les projets. Il contient des pages pour les étudiants et
+    des pages pour l’administrateur (Admin).
+
+2)  Pages principales du site
+
+    index.html
+
+-   Page d’accueil du site. Elle présente CampusHub et propose des liens
+    de navigation.
+
+about.html - Page qui présente le site et explique son objectif.
+
+contact.html - Page de contact. Elle contient un formulaire où le
+visiteur saisit son nom, son adresse e-mail, le sujet et son message. -
+Elle utilise assets/js/public.js pour vérifier les champs et enregistrer
+le message localement.
+
+login.html - Page de connexion.
+
+register.html - Page de création d’un compte.
+
+3) Pages de l’administrateur
+
+admin/dashboard.html - Tableau de bord de l’administrateur. Il permet
+d’accéder à la gestion des étudiants, des événements, des projets, des
+ressources et des objets perdus. - Le bouton « Student Messages » a été
+ajouté pour ouvrir la page des messages des étudiants.
+
+admin/messages.html - Page qui affiche les messages envoyés depuis le
+formulaire Contact. - Elle lit les données enregistrées dans le
+LocalStorage sous la clé campushub_contact_messages. - Elle affiche le
+nom, l’adresse e-mail, le sujet, le message et la date, avec un bouton
+pour revenir au tableau de bord.
+
+admin/students.html - Gestion des informations des étudiants.
+
+admin/events.html - Gestion des événements universitaires.
+
+admin/projects.html - Gestion des projets.
+
+admin/resources.html - Gestion des ressources pédagogiques.
+
+admin/lost-found.html - Gestion des objets perdus et trouvés.
+
+4) Pages de l’étudiant
+
+student/dashboard.html - Tableau de bord de l’étudiant.
+
+student/events.html - Affichage des événements et possibilité de s’y
+inscrire ou de se désinscrire.
+
+student/resources.html - Affichage des ressources pédagogiques.
+
+student/services.html - Page des services destinés aux étudiants.
+
+student/team-up.html - Création et recherche de projets, ainsi que
+gestion des demandes pour rejoindre un projet.
+
+student/community.html - Espace communautaire avec publications,
+commentaires, mentions « J’aime » et signalements.
+
+student/profile.html - Affichage et modification des informations de
+l’étudiant : nom, e-mail et spécialité. Les changements peuvent être
+enregistrés.
+
+student/lost-found.html - Affichage des informations concernant les
+objets perdus et trouvés.
+
+5) Fichiers JavaScript
+
+assets/js/storage.js - Fournit des fonctions de stockage dans le
+LocalStorage, de gestion de la session, de création d’identifiants et
+d’historique d’activité.
+
+assets/js/auth.js - Gère la connexion, la création de compte et la
+vérification des informations de connexion.
+
+assets/js/admin.js - Contient les fonctions des pages administrateur :
+gestion des étudiants, événements, projets, ressources, objets perdus et
+tableau de bord.
+
+assets/js/student.js - Contient les fonctions des pages étudiantes,
+notamment le tableau de bord, les événements, les ressources, les
+services et les objets perdus.
+
+assets/js/team-up.js - Gère les projets collaboratifs : création d’un
+projet, recherche de projets et demandes pour rejoindre un projet.
+
+assets/js/community.js - Gère l’espace communautaire : publications,
+commentaires, mentions « J’aime », signalements et suppressions.
+
+assets/js/profile.js - Affiche les informations de l’étudiant, permet de
+les modifier et de les enregistrer.
+
+assets/js/public.js - Contient la fonction verif() utilisée par le
+formulaire Contact. - Elle lit le nom, l’e-mail, le sujet et le message,
+puis vérifie que les champs ne sont pas vides. - Elle ajoute le message
+au LocalStorage sous le nom campushub_contact_messages, affiche un
+message de confirmation et vide le formulaire.
+
+6) Fichiers CSS (design)
+
+assets/css/style.css - Styles généraux partagés dans le site.
+
+assets/css/main.css - Styles généraux des pages principales et des
+composants du site.
+
+assets/css/responsive.css - Adapte l’affichage aux différentes tailles
+d’écran.
+
+assets/css/auth.css - Design des pages de connexion et de création de
+compte.
+
+assets/css/dashboard.css - Design des éléments des tableaux de bord.
+
+assets/css/public-pages.css - Design des pages publiques, comme About et
+Contact.
+
+assets/css/admin-pages.css - Design des pages d’administration.
+
+assets/css/student-pages.css - Design des pages étudiantes.
+
+assets/css/services.css - Styles liés aux pages de services.
+
+7) Autres fichiers
+
+README_AR.md - Documentation qui décrit l’organisation du projet,
+certaines fonctionnalités et la manière de le lancer.
+
+.vscode/settings.json - Paramètres de Visual Studio Code pour ce projet.
+
+8) Comment fonctionne la fonctionnalité des messages des étudiants ?
+
+1.  Le visiteur ouvre contact.html.
+2.  Il remplit son nom, son e-mail, le sujet et le message, puis clique
+    sur « Send Message ».
+3.  La page appelle la fonction verif() dans assets/js/public.js.
+4.  La fonction enregistre le message dans le LocalStorage sous la clé
+    campushub_contact_messages.
+5.  L’administrateur ouvre admin/dashboard.html, puis clique sur «
+    Student Messages ».
+6.  La page admin/messages.html s’ouvre, lit les messages avec la même
+    clé et les affiche.
+
+Remarque très importante : Cette fonctionnalité est une version de
+démonstration et utilise le LocalStorage du navigateur. Le message n’est
+donc pas automatiquement transféré de l’ordinateur de l’étudiant à celui
+de l’administrateur. Pour recevoir des messages entre différents
+appareils, le site doit être relié à un serveur ou à une base de données
+partagée.
+
+9) Lancer le projet
+
+-   Décompressez CampusHub.zip.
+-   Ouvrez le dossier CampusHub dans Visual Studio Code.
+-   Lancez index.html avec Live Server.
+-   Testez les pages dans le navigateur.
+
+Ce document donne une explication simple du rôle des fichiers du projet.
+Il ne décrit pas chaque ligne de code.

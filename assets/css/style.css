@@ -1,0 +1,427 @@
+/* Style général */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR */
+
+.main-navbar {
+    background-color: #101d36;
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navbar-brand span {
+    color: #5b8cff;
+}
+
+.nav-link {
+    color: #dce4f2;
+    margin: 0 8px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.nav-login {
+    border-radius: 7px;
+}
+
+.nav-register {
+    background-color: #2457d6;
+    border: none;
+    border-radius: 7px;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+    padding: 80px 0;
+    background-color: #f5f7fb;
+}
+
+.hero-text {
+    padding-right: 30px;
+}
+
+.hero-label {
+    color: #2457d6;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    font-weight: bold;
+    color: #101d36;
+    margin-top: 20px;
+    line-height: 1.2;
+}
+
+.hero-text h1 span {
+    color: #2457d6;
+}
+
+.hero-description {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    padding: 13px 22px;
+    border-radius: 8px;
+}
+
+.hero-note {
+    margin-top: 30px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.hero-note i {
+    color: #2457d6;
+    margin-right: 7px;
+}
+
+.hero-image {
+    padding: 20px;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(16, 29, 54, 0.15);
+}
+
+.image-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.image-card h5 {
+    color: #101d36;
+    margin: 0;
+    font-size: 16px;
+}
+
+.image-card p {
+    color: #64748b;
+    margin: 5px 0 0;
+    font-size: 13px;
+}
+
+.image-icon {
+    background-color: #e8efff;
+    color: #2457d6;
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 23px;
+}
+
+/* SECTIONS GENERALES */
+
+.features-section,
+.how-section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px;
+}
+
+.section-label {
+    color: #2457d6;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    color: #101d36;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.section-heading h2 span {
+    color: #2457d6;
+}
+
+.section-heading p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+/* FEATURE CARDS */
+
+.feature-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 13px;
+    box-shadow: 0 4px 20px rgba(16, 29, 54, 0.07);
+    height: 100%;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 30px rgba(16, 29, 54, 0.12);
+}
+
+.feature-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 24px;
+    margin-bottom: 22px;
+}
+
+.icon-blue {
+    background-color: #e8efff;
+    color: #2457d6;
+}
+
+.icon-purple {
+    background-color: #f0eaff;
+    color: #8055d6;
+}
+
+.icon-orange {
+    background-color: #fff0df;
+    color: #e58b27;
+}
+
+.icon-green {
+    background-color: #e2f8ed;
+    color: #19965b;
+}
+
+.icon-pink {
+    background-color: #ffe8ef;
+    color: #d64c7a;
+}
+
+.icon-cyan {
+    background-color: #e0f7fa;
+    color: #1595a5;
+}
+
+.feature-card h4 {
+    color: #101d36;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.feature-card p {
+    color: #64748b;
+    line-height: 1.8;
+    margin-top: 12px;
+}
+
+/* HOW IT WORKS */
+
+.how-section {
+    background-color: #f5f7fb;
+}
+
+.step-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(16, 29, 54, 0.05);
+}
+
+.step-number {
+    color: #2457d6;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.step-card h4 {
+    color: #101d36;
+    font-weight: bold;
+}
+
+.step-card p {
+    color: #64748b;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+/* CALL TO ACTION */
+
+.cta-section {
+    background-color: #101d36;
+    padding: 75px 20px;
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.cta-content p {
+    color: #c5d0e2;
+    margin: 20px auto 30px;
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+.cta-btn {
+    padding: 14px 25px;
+    border-radius: 8px;
+    color: #2457d6;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+.main-footer {
+    background-color: #0b1529;
+    padding: 55px 0 20px;
+    color: white;
+}
+
+.footer-brand {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.footer-brand span {
+    color: #5b8cff;
+}
+
+.footer-description {
+    color: #9ba9bf;
+    margin-top: 15px;
+    line-height: 1.8;
+}
+
+.main-footer h5 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.main-footer .row a:not(.footer-brand) {
+    display: block;
+    color: #9ba9bf;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.main-footer .row a:not(.footer-brand):hover {
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #29364b;
+    margin-top: 30px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    color: #8795aa;
+    font-size: 13px;
+}
+
+/* ========================================== */
+/* PARTIE 2 : NOUVELLES NOTIONS CSS */
+/* ========================================== */
+
+/* Positionnement avancé */
+
+.image-card {
+    z-index: 2;
+}
+
+/* Amélioration des transitions */
+
+.nav-link,
+.nav-register,
+.nav-login,
+.hero-btn,
+.cta-btn {
+    transition: all 0.3s ease;
+}
+
+/* Boutons */
+
+.nav-register:hover {
+    background-color: #1945b2;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    background-color: #e8efff;
+}
+
+/* Image */
+
+.hero-image img {
+    object-position: center;
+}
+
+/* Selection */
+
+::selection {
+    background-color: #2457d6;
+    color: white;
+}

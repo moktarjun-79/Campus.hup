@@ -1,0 +1,1195 @@
+
+
+/* TABLE */
+
+.lost-admin-table {
+    min-width: 1050px;
+}
+
+.lost-admin-table thead th {
+    background-color: #f5f7fb;
+    color: #526078;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 15px 12px;
+    white-space: nowrap;
+}
+
+.lost-admin-table tbody td {
+    color: #526078;
+    font-size: 13px;
+    padding: 15px 12px;
+}
+
+.lost-admin-table tbody tr:hover {
+    background-color: #f9faff;
+}
+
+/* ITEM TITLE */
+
+.lost-item-title {
+    color: #101d36;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.lost-item-description {
+    color: #8795aa;
+    font-size: 12px;
+}
+
+/* TYPE BADGES */
+
+.lost-type-badge {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.lost-type-badge.lost {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.lost-type-badge.found {
+    background-color: #d1e7dd;
+    color: #146c43;
+}
+
+/* STATUS BADGES */
+
+.lost-status-badge {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.lost-status-badge.open {
+    background-color: #e2edff;
+    color: #2457d6;
+}
+
+.lost-status-badge.resolved {
+    background-color: #e2e3e5;
+    color: #41464b;
+}
+
+/* ACTION BUTTONS */
+
+.lost-admin-actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.lost-admin-actions .btn {
+    font-size: 12px;
+}
+
+/* EMPTY STATE */
+
+.lost-admin-empty {
+    text-align: center;
+    color: #8795aa;
+    padding: 40px 15px !important;
+}
+
+/* FILTERS */
+
+#lostAdminSearch,
+#lostAdminType,
+#lostAdminStatus {
+    border: 1px solid #e1e6ef;
+    border-radius: 8px;
+    padding: 11px 13px;
+}
+
+#lostAdminSearch:focus,
+#lostAdminType:focus,
+#lostAdminStatus:focus {
+    border-color: #5b8cff;
+    box-shadow: 0 0 0 3px rgba(91, 140, 255, 0.12);
+}
+
+/* RESPONSIVE */
+
+/* ==========================================
+   LOST & FOUND DETAILS MODAL
+   ========================================== */
+
+.lost-details-header {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e8edf5;
+}
+
+.lost-details-header h4 {
+    color: #101d36;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.lost-detail-card {
+    background-color: #f7f9fc;
+    border: 1px solid #e8edf5;
+    border-radius: 10px;
+    padding: 15px;
+    height: 100%;
+}
+
+.lost-detail-card small {
+    color: #8795aa;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 7px;
+}
+
+.lost-detail-card p {
+    color: #101d36;
+    font-weight: 600;
+    margin-bottom: 0;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+#detailDescription {
+    font-weight: 400;
+    line-height: 1.7;
+    min-height: 55px;
+}
+
+
+/* ===== Original file: admin-projects.css ===== */
+
+/* ==========================================
+   CampusHub - Admin Projects
+   File: assets/css/admin-projects.css
+   ========================================== */
+
+/* PROJECT TABLE */
+
+.project-admin-table {
+    min-width: 1050px;
+}
+
+.project-admin-table thead th {
+    background-color: #f5f7fb;
+    color: #526078;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 15px 12px;
+    white-space: nowrap;
+}
+
+.project-admin-table tbody td {
+    color: #526078;
+    font-size: 13px;
+    padding: 15px 12px;
+}
+
+.project-admin-table tbody tr:hover {
+    background-color: #f9faff;
+}
+
+/* PROJECT INFORMATION */
+
+.project-admin-title {
+    color: #101d36;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.project-admin-description {
+    color: #8795aa;
+    font-size: 12px;
+    max-width: 250px;
+}
+
+/* STATUS */
+
+.project-status-badge {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-status-badge.open {
+    background-color: #d1e7dd;
+    color: #146c43;
+}
+
+.project-status-badge.closed {
+    background-color: #e2e3e5;
+    color: #41464b;
+}
+
+/* REQUEST DETAILS */
+
+.project-requests-details {
+    min-width: 150px;
+}
+
+.project-requests-details summary {
+    color: #2457d6;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.project-request-item {
+    background-color: #f8f9fc;
+    border: 1px solid #e8edf5;
+    border-radius: 8px;
+    padding: 9px;
+    margin-top: 8px;
+}
+
+.project-request-item small {
+    display: block;
+    color: #7b8798;
+}
+
+.project-request-status {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* ACTIONS */
+
+.project-admin-actions {
+    white-space: nowrap;
+}
+
+.project-admin-actions .btn {
+    font-size: 12px;
+}
+
+/* FILTERS */
+
+#projectSearch,
+#projectCategoryFilter,
+#projectStatusFilter {
+    border: 1px solid #e1e6ef;
+    border-radius: 8px;
+    padding: 11px 13px;
+}
+
+#projectSearch:focus,
+#projectCategoryFilter:focus,
+#projectStatusFilter:focus {
+    border-color: #5b8cff;
+    box-shadow: 0 0 0 3px rgba(91, 140, 255, 0.12);
+}
+
+/* EMPTY STATE */
+
+.project-admin-empty {
+    text-align: center;
+    color: #8795aa;
+    padding: 40px 15px !important;
+}
+
+/* RESPONSIVE */
+
+
+/* ===== Original file: admin-resources.css ===== */
+
+/* ==========================================
+   CampusHub - Admin Resources
+   File: assets/css/admin-resources.css
+   ========================================== */
+
+/* PAGE HEADING */
+
+.resources-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.resources-heading h1 {
+    color: #101d36;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.resources-heading p:last-child {
+    color: #718096;
+    margin-bottom: 0;
+}
+
+/* RESOURCE FORM */
+
+.admin-resource-form .form-label {
+    color: #34415a;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.admin-resource-form .form-control,
+.admin-resource-form .form-select {
+    border: 1px solid #e1e6ef;
+    border-radius: 8px;
+    padding: 11px 13px;
+}
+
+.admin-resource-form .form-control:focus,
+.admin-resource-form .form-select:focus {
+    border-color: #5b8cff;
+    box-shadow: 0 0 0 3px rgba(91, 140, 255, 0.12);
+}
+
+.admin-resource-form textarea {
+    resize: vertical;
+}
+
+/* RESOURCES TOOLS */
+
+.resources-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.resources-filters {
+    display: flex;
+    gap: 10px;
+    width: 55%;
+}
+
+.resources-filters input,
+.resources-filters select {
+    border-radius: 8px;
+    border: 1px solid #e1e6ef;
+    padding: 10px 12px;
+}
+
+.resources-filters input {
+    flex: 1;
+    min-width: 150px;
+}
+
+.resources-filters select {
+    width: 180px;
+}
+
+/* TABLE */
+
+.admin-resources-table {
+    min-width: 850px;
+}
+
+.admin-resources-table thead th {
+    background-color: #f5f7fb;
+    color: #526078;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 15px 12px;
+    white-space: nowrap;
+}
+
+.admin-resources-table tbody td {
+    color: #526078;
+    font-size: 13px;
+    padding: 15px 12px;
+}
+
+.admin-resources-table tbody tr:hover {
+    background-color: #f9faff;
+}
+
+.admin-resources-table .resource-title {
+    color: #101d36;
+    font-weight: 700;
+}
+
+.resource-category-badge {
+    display: inline-block;
+    background-color: #eaf0ff;
+    color: #2457d6;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.resource-action-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.resource-action-buttons .btn {
+    font-size: 12px;
+}
+
+/* FOOTNOTE */
+
+.resources-footnote {
+    color: #8795aa;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+/* EMPTY TABLE */
+
+.resources-empty {
+    text-align: center;
+    color: #8795aa;
+    padding: 35px 15px !important;
+}
+
+/* RESPONSIVE */
+
+
+/* ===== Original file: admin-students.css ===== */
+
+/* ==========================================
+   CampusHub - Admin Students Management
+   File: assets/css/admin-students.css
+   ========================================== */
+
+.students-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.students-heading h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.students-heading p:last-child {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+.students-panel {
+    padding: 24px;
+}
+
+.students-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.students-filters {
+    display: flex;
+    gap: 10px;
+    width: min(100%, 590px);
+}
+
+.students-filters input {
+    min-width: 230px;
+}
+
+.students-filters select {
+    min-width: 175px;
+}
+
+.students-table {
+    margin-bottom: 12px;
+}
+
+.students-table thead th {
+    color: #667085;
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+    border-bottom: 1px solid #e9edf3;
+}
+
+.students-table tbody td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.student-name {
+    font-weight: 600;
+    color: #172033;
+}
+
+.student-status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 30px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-active { color: #146c43; background: #d1e7dd; }
+.status-inactive { color: #842029; background: #f8d7da; }
+.status-waiting { color: #664d03; background: #fff3cd; }
+
+.students-footnote {
+    color: #7b8494;
+    font-size: 0.82rem;
+    margin-top: 12px;
+}
+
+.students-empty {
+    text-align: center;
+    color: #7b8494;
+    padding: 30px 10px !important;
+}
+
+
+/* ===== Preserved original rules: admin-lost-found.css ===== */
+
+
+/* ==========================================
+   CampusHub - Admin Lost & Found
+   File: assets/css/admin-lost-found.css
+   ========================================== */
+
+
+/* TABLE */
+
+.lost-admin-table {
+    min-width: 1050px;
+}
+
+.lost-admin-table thead th {
+    background-color: #f5f7fb;
+    color: #526078;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 15px 12px;
+    white-space: nowrap;
+}
+
+.lost-admin-table tbody td {
+    color: #526078;
+    font-size: 13px;
+    padding: 15px 12px;
+}
+
+.lost-admin-table tbody tr:hover {
+    background-color: #f9faff;
+}
+
+
+/* ITEM TITLE */
+
+.lost-item-title {
+    color: #101d36;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.lost-item-description {
+    color: #8795aa;
+    font-size: 12px;
+}
+
+
+/* TYPE BADGES */
+
+.lost-type-badge {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.lost-type-badge.lost {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.lost-type-badge.found {
+    background-color: #d1e7dd;
+    color: #146c43;
+}
+
+
+/* STATUS BADGES */
+
+.lost-status-badge {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.lost-status-badge.open {
+    background-color: #e2edff;
+    color: #2457d6;
+}
+
+.lost-status-badge.resolved {
+    background-color: #e2e3e5;
+    color: #41464b;
+}
+
+
+/* ACTION BUTTONS */
+
+.lost-admin-actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.lost-admin-actions .btn {
+    font-size: 12px;
+}
+
+
+/* EMPTY STATE */
+
+.lost-admin-empty {
+    text-align: center;
+    color: #8795aa;
+    padding: 40px 15px !important;
+}
+
+
+/* FILTERS */
+
+#lostAdminSearch,
+#lostAdminType,
+#lostAdminStatus {
+    border: 1px solid #e1e6ef;
+    border-radius: 8px;
+    padding: 11px 13px;
+}
+
+#lostAdminSearch:focus,
+#lostAdminType:focus,
+#lostAdminStatus:focus {
+    border-color: #5b8cff;
+    box-shadow: 0 0 0 3px rgba(91, 140, 255, 0.12);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+
+    .dashboard-welcome {
+        gap: 15px;
+    }
+
+    .lost-admin-table {
+        min-width: 1000px;
+    }
+
+}
+
+/* ==========================================
+   LOST & FOUND DETAILS MODAL
+   ========================================== */
+
+.lost-details-header {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e8edf5;
+}
+
+.lost-details-header h4 {
+    color: #101d36;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.lost-detail-card {
+    background-color: #f7f9fc;
+    border: 1px solid #e8edf5;
+    border-radius: 10px;
+    padding: 15px;
+    height: 100%;
+}
+
+.lost-detail-card small {
+    color: #8795aa;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 7px;
+}
+
+.lost-detail-card p {
+    color: #101d36;
+    font-weight: 600;
+    margin-bottom: 0;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+#detailDescription {
+    font-weight: 400;
+    line-height: 1.7;
+    min-height: 55px;
+}
+
+
+
+/* ===== Preserved original rules: admin-projects.css ===== */
+
+
+/* ==========================================
+   CampusHub - Admin Projects
+   File: assets/css/admin-projects.css
+   ========================================== */
+
+
+/* PROJECT TABLE */
+
+.project-admin-table {
+    min-width: 1050px;
+}
+
+.project-admin-table thead th {
+    background-color: #f5f7fb;
+    color: #526078;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 15px 12px;
+    white-space: nowrap;
+}
+
+.project-admin-table tbody td {
+    color: #526078;
+    font-size: 13px;
+    padding: 15px 12px;
+}
+
+.project-admin-table tbody tr:hover {
+    background-color: #f9faff;
+}
+
+
+/* PROJECT INFORMATION */
+
+.project-admin-title {
+    color: #101d36;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.project-admin-description {
+    color: #8795aa;
+    font-size: 12px;
+    max-width: 250px;
+}
+
+
+/* STATUS */
+
+.project-status-badge {
+    display: inline-block;
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.project-status-badge.open {
+    background-color: #d1e7dd;
+    color: #146c43;
+}
+
+.project-status-badge.closed {
+    background-color: #e2e3e5;
+    color: #41464b;
+}
+
+
+/* REQUEST DETAILS */
+
+.project-requests-details {
+    min-width: 150px;
+}
+
+.project-requests-details summary {
+    color: #2457d6;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.project-request-item {
+    background-color: #f8f9fc;
+    border: 1px solid #e8edf5;
+    border-radius: 8px;
+    padding: 9px;
+    margin-top: 8px;
+}
+
+.project-request-item small {
+    display: block;
+    color: #7b8798;
+}
+
+.project-request-status {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ACTIONS */
+
+.project-admin-actions {
+    white-space: nowrap;
+}
+
+.project-admin-actions .btn {
+    font-size: 12px;
+}
+
+
+/* FILTERS */
+
+#projectSearch,
+#projectCategoryFilter,
+#projectStatusFilter {
+    border: 1px solid #e1e6ef;
+    border-radius: 8px;
+    padding: 11px 13px;
+}
+
+#projectSearch:focus,
+#projectCategoryFilter:focus,
+#projectStatusFilter:focus {
+    border-color: #5b8cff;
+    box-shadow: 0 0 0 3px rgba(91, 140, 255, 0.12);
+}
+
+
+/* EMPTY STATE */
+
+.project-admin-empty {
+    text-align: center;
+    color: #8795aa;
+    padding: 40px 15px !important;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+
+    .project-admin-table {
+        min-width: 1050px;
+    }
+
+}
+
+
+
+/* ===== Preserved original rules: admin-resources.css ===== */
+
+
+/* ==========================================
+   CampusHub - Admin Resources
+   File: assets/css/admin-resources.css
+   ========================================== */
+
+
+/* PAGE HEADING */
+
+.resources-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.resources-heading h1 {
+    color: #101d36;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.resources-heading p:last-child {
+    color: #718096;
+    margin-bottom: 0;
+}
+
+
+/* RESOURCE FORM */
+
+.admin-resource-form .form-label {
+    color: #34415a;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.admin-resource-form .form-control,
+.admin-resource-form .form-select {
+    border: 1px solid #e1e6ef;
+    border-radius: 8px;
+    padding: 11px 13px;
+}
+
+.admin-resource-form .form-control:focus,
+.admin-resource-form .form-select:focus {
+    border-color: #5b8cff;
+    box-shadow: 0 0 0 3px rgba(91, 140, 255, 0.12);
+}
+
+.admin-resource-form textarea {
+    resize: vertical;
+}
+
+
+/* RESOURCES TOOLS */
+
+.resources-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.resources-filters {
+    display: flex;
+    gap: 10px;
+    width: 55%;
+}
+
+.resources-filters input,
+.resources-filters select {
+    border-radius: 8px;
+    border: 1px solid #e1e6ef;
+    padding: 10px 12px;
+}
+
+.resources-filters input {
+    flex: 1;
+    min-width: 150px;
+}
+
+.resources-filters select {
+    width: 180px;
+}
+
+
+/* TABLE */
+
+.admin-resources-table {
+    min-width: 850px;
+}
+
+.admin-resources-table thead th {
+    background-color: #f5f7fb;
+    color: #526078;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 15px 12px;
+    white-space: nowrap;
+}
+
+.admin-resources-table tbody td {
+    color: #526078;
+    font-size: 13px;
+    padding: 15px 12px;
+}
+
+.admin-resources-table tbody tr:hover {
+    background-color: #f9faff;
+}
+
+.admin-resources-table .resource-title {
+    color: #101d36;
+    font-weight: 700;
+}
+
+.resource-category-badge {
+    display: inline-block;
+    background-color: #eaf0ff;
+    color: #2457d6;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.resource-action-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.resource-action-buttons .btn {
+    font-size: 12px;
+}
+
+
+/* FOOTNOTE */
+
+.resources-footnote {
+    color: #8795aa;
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+
+/* EMPTY TABLE */
+
+.resources-empty {
+    text-align: center;
+    color: #8795aa;
+    padding: 35px 15px !important;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+
+    .resources-heading {
+        align-items: flex-start;
+    }
+
+    .resources-heading h1 {
+        font-size: 24px;
+    }
+
+    .resources-tools {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .resources-filters {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .resources-filters select {
+        width: 100%;
+    }
+
+    .admin-resource-form,
+    .admin-resources-panel {
+        padding: 18px;
+    }
+
+}
+
+
+
+/* ===== Preserved original rules: admin-students.css ===== */
+
+/* ==========================================
+   CampusHub - Admin Students Management
+   File: assets/css/admin-students.css
+   ========================================== */
+
+.students-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.students-heading h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.students-heading p:last-child {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+.students-panel {
+    padding: 24px;
+}
+
+.students-tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.students-filters {
+    display: flex;
+    gap: 10px;
+    width: min(100%, 590px);
+}
+
+.students-filters input {
+    min-width: 230px;
+}
+
+.students-filters select {
+    min-width: 175px;
+}
+
+.students-table {
+    margin-bottom: 12px;
+}
+
+.students-table thead th {
+    color: #667085;
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+    border-bottom: 1px solid #e9edf3;
+}
+
+.students-table tbody td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.student-name {
+    font-weight: 600;
+    color: #172033;
+}
+
+.student-status {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 30px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-active { color: #146c43; background: #d1e7dd; }
+.status-inactive { color: #842029; background: #f8d7da; }
+.status-waiting { color: #664d03; background: #fff3cd; }
+
+.students-footnote {
+    color: #7b8494;
+    font-size: 0.82rem;
+    margin-top: 12px;
+}
+
+.students-empty {
+    text-align: center;
+    color: #7b8494;
+    padding: 30px 10px !important;
+}
+
+@media (max-width: 767px) {
+    .students-tools { align-items: stretch; flex-direction: column; }
+    .students-filters { flex-direction: column; width: 100%; }
+    .students-filters input, .students-filters select { min-width: 100%; }
+    .students-panel { padding: 16px; }
+    .students-heading h1 { font-size: 1.6rem; }
+}

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Lost & Found Management | CampusHub</title>
+
+    <!-- CODE ETUDIE EN COURS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- EXISTING PROJECT CSS -->
+
+    <link rel="stylesheet" href="../assets/css/dashboard.css" />
+
+    <!-- CODE SUPPLEMENTAIRE -->
+
+    <link rel="stylesheet" href="../assets/css/admin-pages.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+
+  <body class="dashboard-body">
+    <!-- NAVBAR -->
+
+    <nav class="dashboard-navbar">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <a href="dashboard.html" class="dashboard-brand text-decoration-none">
+          Campus<span>Hub.</span>
+        </a>
+
+        <div class="d-flex align-items-center gap-3">
+          <span class="dashboard-user" id="adminName"> Administrator </span>
+
+          <button class="btn btn-outline-light btn-sm" id="logoutBtn">
+            <i class="bi bi-box-arrow-left me-1"></i>
+            Logout
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container dashboard-main">
+      <!-- PAGE HEADER -->
+
+      <div class="dashboard-welcome">
+        <div>
+          <p class="text-primary fw-bold">ADMINISTRATION</p>
+
+          <h1>Lost & Found Management</h1>
+
+          <p>Monitor and manage student lost and found announcements.</p>
+        </div>
+
+        <a href="dashboard.html" class="btn btn-outline-primary">
+          <i class="bi bi-arrow-left me-1"></i>
+          Dashboard
+        </a>
+      </div>
+
+      <div id="lostAdminMessage"></div>
+
+      <!-- STATISTICS -->
+
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-lg-3">
+          <div class="dashboard-stat">
+            <p class="dashboard-stat-label">Total Announcements</p>
+
+            <h2 class="dashboard-stat-number" id="totalLostItems">0</h2>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="dashboard-stat">
+            <p class="dashboard-stat-label">Lost Items</p>
+
+            <h2 class="dashboard-stat-number" id="totalLostOnly">0</h2>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="dashboard-stat">
+            <p class="dashboard-stat-label">Found Items</p>
+
+            <h2 class="dashboard-stat-number" id="totalFoundOnly">0</h2>
+          </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="dashboard-stat">
+            <p class="dashboard-stat-label">Open Announcements</p>
+
+            <h2 class="dashboard-stat-number" id="totalOpenLost">0</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- FILTERS -->
+
+      <section class="dashboard-panel mb-4">
+        <h3 class="mb-3">
+          <i class="bi bi-funnel me-2 text-primary"></i>
+          Search and Filter
+        </h3>
+
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label for="lostAdminSearch" class="form-label"> Search </label>
+
+            <input type="search" class="form-control" id="lostAdminSearch" placeholder="Title, location, category..." />
+          </div>
+
+          <div class="col-md-4">
+            <label for="lostAdminType" class="form-label">
+              Announcement Type
+            </label>
+
+            <select class="form-select" id="lostAdminType">
+              <option value="">All Types</option>
+
+              <option value="Lost">Lost</option>
+
+              <option value="Found">Found</option>
+            </select>
+          </div>
+
+          <div class="col-md-4">
+            <label for="lostAdminStatus" class="form-label"> Status </label>
+
+            <select class="form-select" id="lostAdminStatus">
+              <option value="">All Statuses</option>
+
+              <option value="Open">Open</option>
+
+              <option value="Resolved">Resolved</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANNOUNCEMENTS TABLE -->
+
+      <section class="dashboard-panel">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+          <div>
+            <h3 class="mb-1">Student Announcements</h3>
+
+            <p class="text-muted mb-0">
+              Review all Lost & Found announcements.
+            </p>
+          </div>
+
+          <span class="badge bg-primary" id="displayedLostCount">
+            0 Announcements
+          </span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-hover align-middle lost-admin-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+
+                <th>Type</th>
+
+                <th>Category</th>
+
+                <th>Location</th>
+
+                <th>Student</th>
+
+                <th>Date</th>
+
+                <th>Status</th>
+
+                <th>Actions</th>
+              </tr>
+            </thead>
+
+            <tbody id="lostAdminTable">
+              <tr>
+                <td colspan="8" class="text-center py-4">
+                  Loading announcements...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-muted small mb-0">
+          Changes are saved in LocalStorage and reflected in the student
+          service.
+        </p>
+      </section>
+    </main>
+
+    <!-- LOST & FOUND DETAILS MODAL -->
+
+    <div class="modal fade" id="lostDetailsModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div>
+              <h5 class="modal-title fw-bold">Announcement Details</h5>
+
+              <small class="text-muted">
+                Complete Lost & Found information
+              </small>
+            </div>
+
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="lost-details-header mb-4">
+              <h4 id="detailTitle"></h4>
+
+              <div class="d-flex gap-2">
+                <span id="detailType" class="lost-type-badge"> </span>
+
+                <span id="detailStatus" class="lost-status-badge"> </span>
+              </div>
+            </div>
+
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="lost-detail-card">
+                  <small>Student Name</small>
+                  <p id="detailStudent"></p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="lost-detail-card">
+                  <small>Matricule</small>
+                  <p id="detailMatricule"></p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="lost-detail-card">
+                  <small>Category</small>
+                  <p id="detailCategory"></p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="lost-detail-card">
+                  <small>Location</small>
+                  <p id="detailLocation"></p>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="lost-detail-card">
+                  <small>Description</small>
+                  <p id="detailDescription"></p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="lost-detail-card">
+                  <small>Publication Date</small>
+                  <p id="detailDate"></p>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="lost-detail-card">
+                  <small>Last Update</small>
+                  <p id="detailUpdated"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="container dashboard-footer">
+      © 2026 CampusHub Administration.
+    </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../assets/js/storage.js"></script>
+
+    <script src="../assets/js/admin.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Resources | CampusHub</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <link rel="stylesheet" href="../assets/css/services.css">
+    <link rel="stylesheet" href="../assets/css/student-pages.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+<div class="service-layout">
+    <aside class="service-sidebar">
+        <a href="dashboard.html" class="service-brand">Campus<span>Hub.</span></a>
+        <p class="sidebar-label">STUDENT SPACE</p>
+        <a href="dashboard.html" class="service-link"><i class="bi bi-grid"></i> Dashboard</a>
+        <a href="services.html" class="service-link"><i class="bi bi-house"></i> Services Home</a>
+        <a href="resources.html" class="service-link active"><i class="bi bi-book"></i> Academic Resources</a>
+        <a href="events.html" class="service-link"><i class="bi bi-calendar-event"></i> Events</a>
+        <a href="lost-found.html" class="service-link"><i class="bi bi-search"></i> Lost & Found</a>
+        <a href="team-up.html" class="service-link"><i class="bi bi-people"></i> Team Up</a>
+        <a href="community.html" class="service-link"><i class="bi bi-chat-dots"></i> Community</a>
+        <a href="profile.html" class="service-link"><i class="bi bi-person-circle"></i> My Profile</a>
+        <div class="sidebar-bottom">
+            <button id="logoutBtn" class="service-link logout-link"><i class="bi bi-box-arrow-left"></i> Logout</button>
+        </div>
+    </aside>
+
+    <main class="service-main">
+        <header class="service-topbar">
+            <div>
+                <p class="topbar-subtitle">STUDENT PORTAL</p>
+                <h2>Academic Resources</h2>
+            </div>
+            <div class="student-welcome">
+                <span id="studentName">Student</span>
+                <div class="student-avatar"><i class="bi bi-person"></i></div>
+            </div>
+        </header>
+
+        <div id="resourceMessage"></div>
+
+        <section class="resource-intro">
+            <div>
+                <p class="section-label">LEARN AND SHARE</p>
+                <h1>Academic <span>Resources.</span></h1>
+                <p>Discover useful academic documents or share your knowledge with other students.</p>
+            </div>
+            <div class="resource-intro-icon"><i class="bi bi-journal-bookmark"></i></div>
+        </section>
+
+        <section class="service-section">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">CONTRIBUTE</p>
+                    <h3>Share a Resource</h3>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <form id="resourceForm">
+                    <input type="hidden" id="resourceEditId">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="resourceTitle">Resource Title</label>
+                            <input type="text" class="form-control" id="resourceTitle" placeholder="Example: Algorithmique - Chapter 1" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="resourceSubject">Subject</label>
+                            <input type="text" class="form-control" id="resourceSubject" placeholder="Example: Computer Science" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="resourceCategory">Category</label>
+                            <select class="form-select" id="resourceCategory" required>
+                                <option value="">Choose category</option>
+                                <option value="Course">Course</option>
+                                <option value="Exercise">Exercise</option>
+                                <option value="Summary">Summary</option>
+                                <option value="Exam">Exam</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="resourceYear">Academic Year</label>
+                            <input type="text" class="form-control" id="resourceYear" placeholder="Example: 2026">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="resourceUrl">Resource Link</label>
+                            <input type="url" class="form-control" id="resourceUrl" placeholder="https://example.com/document.pdf" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label" for="resourceDescription">Description</label>
+                            <textarea class="form-control" id="resourceDescription" rows="3" placeholder="Describe this resource..."></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary" id="resourceSubmit"><i class="bi bi-cloud-upload me-2"></i> Publish Resource</button>
+                            <button type="reset" class="btn btn-outline-secondary" id="resourceReset">Reset</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="service-section">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">DISCOVER</p>
+                    <h3>Available Resources</h3>
+                </div>
+                <span class="resource-total" id="resourceTotal">0 Resources</span>
+            </div>
+
+            <div class="resource-search-panel">
+                <div class="row g-3">
+                    <div class="col-md-8">
+                        <input type="search" class="form-control" id="resourceSearch" placeholder="Search by title, subject or description...">
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-select" id="resourceFilter">
+                            <option value="">All Categories</option>
+                            <option value="Course">Course</option>
+                            <option value="Exercise">Exercise</option>
+                            <option value="Summary">Summary</option>
+                            <option value="Exam">Exam</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-3" id="resourcesList">
+                <div class="col-12"><div class="empty-state">Loading resources...</div></div>
+            </div>
+        </section>
+
+        <footer class="service-footer">© 2026 CampusHub. One Platform. Every Student.</footer>
+    </main>
+</div>
+
+<script src="../assets/js/storage.js"></script>
+<script src="../assets/js/student.js"></script>
+</body>
+</html>
